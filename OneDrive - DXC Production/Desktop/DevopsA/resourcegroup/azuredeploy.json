@@ -1,0 +1,41 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "rgName": {
+            "type": "string",
+            "defaultValue":"rgazuredemo1",
+            "metadata": {
+                "description": "Name of the resource group"
+            }
+        },
+        "rgLocation": {
+            "type": "string",
+            "metadata": {
+                "description": "description"
+            },
+            "defaultValue":"East US"
+        }
+    },
+     "resources": [
+        {
+           
+            "type": "Microsoft.Resources/resourceGroups",
+            "apiVersion": "2022-09-01",
+            "location": "[parameters('rgLocation')]",
+            "name":"[parameters('rgName')]",
+            "dependsOn": [],
+            "tags": {
+                "ApplicationID":"500399",
+                "ApplicationName":"ApplicationName",
+                "ApplicationOwnerEmail":"dduvvuri2@dxc.com",
+                "CostCenter":"CostCenter",
+                "Criticality":"1 - Most Critical",
+                "Environments":"Dev",
+                "L3BusinessOwner":"dduvvuri2@dxc.com",
+                "WBS":"USA7518586"
+            }
+        }
+    ],
+    "outputs": {}
+}
